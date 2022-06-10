@@ -30,9 +30,9 @@ pipeline {
     }
     // Run terraform apply
     stage('Deploy') {
-      when {
-        branch 'main'
-      }
+     // when {
+       // branch 'main'
+      //}
       steps {
         sh label: '', script: 'terraform apply -auto-approve tfplan'
         sh label: '', script:  'terraform show'
