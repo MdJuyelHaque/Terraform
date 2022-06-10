@@ -34,7 +34,8 @@ pipeline {
        // branch 'main'
       //}
       steps {
-        sh label: '', script: 'terraform apply -auto-approve tfplan'
+        //sh label: '', script: 'terraform apply -auto-approve tfplan'
+        sh label: '', script: 'terraform import aws_instance.myinstance i-04a2103bd1f3642fe'
         sh label: '', script:  'terraform show'
 
       }
