@@ -4,6 +4,8 @@ pipeline {
       terraform 'terraform-13'
     }
   environment {
+    AWS_ACCESS_KEY_ID     = credentials('Access_key_ID')
+    AWS_SECRET_ACCESS_KEY = credentials('Secret_access_key')
     TF_WORKSPACE = 'name'
     AWS_DEFAULT_REGION = 'us-west-2'
   }
