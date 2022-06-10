@@ -10,8 +10,6 @@ terraform {
 }
 
 provider "aws" {
-  version = "~> 2.0"
-  shared_credentials_file = "/home/ubuntu/.aws/credentials"
   profile                 = "default"
   region                  = "us-west-2"
 }
