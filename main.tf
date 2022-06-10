@@ -10,8 +10,13 @@ terraform {
 }
 
 provider "aws" {
-  profile                 = "default"
-  region                  = "us-west-2"
+  version = "~> 3.0"
+  profile = "default"
+  region  = "us-west-2"
+}
+
+provider "local" {
+  version = "~> 1.2"
 }
 
 resource "aws_instance" "myinstance" {
