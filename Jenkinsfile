@@ -21,7 +21,7 @@ pipeline {
     // Run Terraform init and plan
     stage('Testing') {
       steps {
-        sh label: 'tf init', script: 'terraform init'
+        sh label: 'tf init', script: 'terraform init -backend-config="profile=default"'
         //sh label: 'refreshing state from s3', script: 'terraform refresh'
         sh label: 'planning build', script:  'terraform plan -out=tfplan -input=false'
       }
